@@ -1,0 +1,16 @@
+<div class="container-total">
+  <div class="container-total__card" *ngFor="let card of cards">
+    <div class="container-total__card__flag">
+      <img src="{{card.flag}}" alt="">
+    </div>
+    <div class="container-total__card__text">
+      <h5>{{card.name}}</h5>
+      <ul>
+        <li><b>Population:</b> <span>{{card.population}}</span></li>
+        <li><b>Region:</b> <span>{{card.region}}</span></li>
+        <li><b>Capital:</b> <span>{{card.capital}}</span></li>
+      </ul>
+    </div>
+  </div>
+</div>
+

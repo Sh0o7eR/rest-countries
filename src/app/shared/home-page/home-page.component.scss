@@ -1,0 +1,15 @@
+.conteiner-home{
+  padding: 50px 100px;
+  &__search{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  &__flag{
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}

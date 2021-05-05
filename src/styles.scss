@@ -1,14 +1,25 @@
 :root{
-  $DarkBlue: hsl(209, 23%, 22%);
-  $VeryDarkBlue: hsl(207, 26%, 17%);
-  $VeryDarkBlue : hsl(200, 15%, 8%);
-  $DarkGray: hsl(0, 0%, 52%);
-  $VeryLightGray : hsl(0, 0%, 98%);
-  $White: hsl(0, 0%, 100%);
-  font-family: 'Nunito Sans', sans-serif;
+  --DarkBlue: hsl(209, 23%, 22%);
+  --VeryDarkBlueDarkMode: hsl(207, 26%, 17%);
+  --VeryDarkBlueLightMode : hsl(200, 15%, 8%);
+  --DarkGray: hsl(0, 0%, 52%);
+  --VeryLightGray : hsl(0, 0%, 98%);
+  --White: hsl(0, 0%, 100%);
 }
 *, *::before, *::after{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+body{
+  font-family: 'Nunito Sans', sans-serif;
+  color: var(--VeryDarkBlueLightMode);
+  font-size: 14px;
+}
+li{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+  color: var(--VeryDarkBlueLightMode);
 }

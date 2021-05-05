@@ -1,0 +1,9 @@
+<div class="dropdown">
+  <button class="btn" type="button" id="dropdownFilter" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Filter by Region
+    <i class="fas fa-angle-down"></i>
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownFilter">
+    <a class="dropdown-item" href="#" *ngFor="let filter of filters">{{filter}}</a>
+  </div>
+</div>
