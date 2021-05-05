@@ -1,5 +1,7 @@
 <div class="container-total">
-  <div class="container-total__card" *ngFor="let card of cards">
+  <div class="container-total__card"
+       *ngFor="let card of cards"
+       routerLink="detailsCountry/{{card.name}}" id="{{card.name}}">
     <div class="container-total__card__flag">
       <img src="{{card.flag}}" alt="Bandiera {{card.name}}">
     </div>

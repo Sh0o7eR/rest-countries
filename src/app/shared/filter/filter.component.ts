@@ -19,11 +19,4 @@ export class FilterComponent implements OnInit {
     this.searchService.getRegionCountries()
       .subscribe(filter => this.filters = filter);
   }
-
-
-/*
-fruits.pipe(
-	distinct()
-).subscribe(fruit => toConveyorBelt(fruit));
-*/
 }

@@ -5,7 +5,8 @@ import {DetailsComponent} from './shared/details/details.component';
 
 const routes: Routes = [
   {path: '', component: HomePageComponent},
-  {path: 'details', component: DetailsComponent}
+  {path: 'detailsCountry/:name', component: DetailsComponent},
+  {path: '**', component: HomePageComponent}
 ];
 
 @NgModule({

@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
-import {CountriesInterface} from '../mocks';
+import {CountriesInterface, DetailsCountriesInterface} from '../mocks';
 import {map} from 'rxjs/operators';
 
 @Injectable({
@@ -25,6 +25,10 @@ export class SearchService {
           return [...new Set(regions)];
         })
       );
+  }
+
+  getDetailsCountries(name: string): Observable<DetailsCountriesInterface>{
+    return this.http.get<DetailsCountriesInterface>(`${this.apiURL}name/${name}`);
   }
 
 }
