@@ -6,10 +6,11 @@ import { AppComponent } from './app.component';
 import { HomePageComponent } from './shared/home-page/home-page.component';
 import { DetailsComponent } from './shared/details/details.component';
 import { NavbarComponent } from './core/navbar/navbar.component';
-import { SearchbarComponent } from './shared/searchbar/searchbar.component';
 import { FilterComponent } from './shared/filter/filter.component';
 import { CardComponent } from './shared/card/card.component';
 import {HttpClientModule} from '@angular/common/http';
+import {FormsModule} from '@angular/forms';
+import { ShareBarComponent } from './shared/share-bar/share-bar.component';
 
 @NgModule({
   declarations: [
@@ -17,15 +18,16 @@ import {HttpClientModule} from '@angular/common/http';
     HomePageComponent,
     DetailsComponent,
     NavbarComponent,
-    SearchbarComponent,
     FilterComponent,
-    CardComponent
+    CardComponent,
+    ShareBarComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        HttpClientModule,
+        FormsModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

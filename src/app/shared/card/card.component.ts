@@ -1,6 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {SearchService} from '../../core/services/search.service';
-
 
 @Component({
   selector: 'app-card',
@@ -8,17 +7,19 @@ import {SearchService} from '../../core/services/search.service';
   styleUrls: ['./card.component.scss']
 })
 export class CardComponent implements OnInit {
-
-  cards: any = [];
-
+  @Input() cards = [];
+  path: string;
   constructor(private searchService: SearchService) { }
 
   ngOnInit(): void {
-    this.searchService.getAllCountries().subscribe(
-      res => {
-        this.cards = res;
-      }
-    );
+    // this.searchService.getAllCountries().subscribe(
+    //   res => {
+    //     this.cards = res;
+    //   }
+    // );
+    // this.query = '';
+
   }
+
 
 }

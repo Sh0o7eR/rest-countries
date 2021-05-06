@@ -31,4 +31,12 @@ export class SearchService {
     return this.http.get<DetailsCountriesInterface>(`${this.apiURL}name/${name}`);
   }
 
+  // getFilterResponse(query: string): Observable<CountriesInterface>{
+  //   return this.http.get<CountriesInterface>(`${this.apiURL}all?fields=${query}`);
+  // }
+
+  getFilterResponseByName(path?: string, query?: string): Observable<CountriesInterface>{
+    return this.http.get<CountriesInterface>(`${this.apiURL}${path}${query}`);
+  }
+
 }

@@ -1,0 +1,10 @@
+<div class="searchBar">
+  <button (click)="addNewItem(newText.value)">
+    <i class="fas fa-search"></i>
+  </button>
+  <input type="text" class="form-control"
+         placeholder="Search for a country..."
+         #newText
+         (keydown.enter)="addNewItem(newText.value)"
+  >
+</div>

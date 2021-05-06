@@ -1,9 +1,9 @@
 <div class="conteiner-home">
   <div class="conteiner-home__search">
-    <app-searchbar></app-searchbar>
+    <app-share-bar (newItemEvent)="addItem($event)"></app-share-bar>
     <app-filter></app-filter>
   </div>
   <div class="conteiner-home__flag">
-    <app-card></app-card>
+    <app-card [cards]="item"></app-card>
   </div>
 </div>

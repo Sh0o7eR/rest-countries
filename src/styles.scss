@@ -16,10 +16,27 @@ body{
   color: var(--VeryDarkBlueLightMode);
   font-size: 14px;
 }
+body.dark-mode {
+  background-color: var(--VeryDarkBlueDarkMode);
+  color: var(--White);
+}
+body.light-mode {
+  background-color: var(--White);
+  color: var(--VeryDarkBlueDarkMode);
+}
+body:not(.dark-mode-preloading) {
+  transition: all 0.3s linear;
+}
 li{
   list-style: none;
 }
 a{
   text-decoration: none;
+  color: var(--VeryDarkBlueLightMode);
+}
+a.dark-mode{
+  color: var(--White);
+}
+a.light-mode{
   color: var(--VeryDarkBlueLightMode);
 }
