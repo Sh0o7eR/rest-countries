@@ -1,0 +1,56 @@
+@import "src/styles";
+.container-gallery{
+  padding: 0 100px;
+  display: flex;
+  position: relative;
+  &__image{
+    margin-right: 50px;
+    margin-bottom: 50px;
+    box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.5);
+    position: relative;
+    img{
+      object-fit: cover;
+    }
+    .image-name{
+      display: flex;
+      align-items: center;
+      position: absolute;
+      color: white;
+      bottom: 7%;
+      left: 7%;
+      box-shadow: 0px 0px 5px 1px rgba(203, 235, 255, 0.9);
+      padding: 10px;
+      background-color: rgba(0,0,0,0.3);
+      .image-profile{
+        border-radius: 50%;
+        object-fit: cover;
+        //box-shadow: 0px 0px 5px 1px rgba(255, 255, 255, 0.6);
+        margin-right: 10px;
+      }
+    }
+    &:hover{
+      box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.9);
+    }
+  }
+  &__desc{
+    &__auth{
+      //img{
+      //  border-radius: 50%;
+      //  object-fit: cover;
+      //  box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.2);
+      //}
+      h2{
+        margin: 20px 0 30px;
+        text-transform: capitalize;
+      }
+    }
+    &__contact{
+      &__portfolio{
+        margin-bottom: 5px;
+        a{
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}

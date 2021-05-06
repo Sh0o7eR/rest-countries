@@ -11,6 +11,7 @@ import { CardComponent } from './shared/card/card.component';
 import {HttpClientModule} from '@angular/common/http';
 import {FormsModule} from '@angular/forms';
 import { ShareBarComponent } from './shared/share-bar/share-bar.component';
+import { UnsplashComponent } from './shared/details/unsplash/unsplash.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ShareBarComponent } from './shared/share-bar/share-bar.component';
     NavbarComponent,
     FilterComponent,
     CardComponent,
-    ShareBarComponent
+    ShareBarComponent,
+    UnsplashComponent
   ],
     imports: [
         BrowserModule,
