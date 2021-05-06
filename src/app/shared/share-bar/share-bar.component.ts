@@ -16,6 +16,5 @@ export class ShareBarComponent implements OnInit {
 
   addNewItem(value: any): void {
     this.newItemEvent.emit(value);
-    console.log('da share -> ' + value);
   }
 }
