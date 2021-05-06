@@ -2,10 +2,10 @@
   <div class="container-gallery" *ngFor="let sec of section">
     <a href="{{sec.portfolio}}" target="_blank">
       <div class="container-gallery__image">
-        <img class="bcImage" src="{{sec.image}}" alt="Immagine di {{sec.nameUser}}">
-        <div class="image-name">
-          <img class="image-profile" src="{{sec.imageUser}}" alt="Foto profilo di {{sec.nameUser}}">
-          <h2 class="name-profile">{{sec.nameUser}}</h2>
+        <img class="container-gallery__image__bcImage" src="{{sec.image}}" alt="Immagine di {{sec.nameUser}}">
+        <div class="container-gallery__image__image-name">
+          <img class="container-gallery__image__image-name__image-profile" src="{{sec.imageUser}}" alt="Foto profilo di {{sec.nameUser}}">
+          <h2 class="container-gallery__image__image-name__name-profile">{{sec.nameUser}}</h2>
         </div>
       </div>
     </a>
