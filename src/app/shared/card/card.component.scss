@@ -11,6 +11,7 @@
     box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.1);
     overflow: hidden;
     margin-bottom: 70px;
+    margin-right: 50px;
     &:hover{
       cursor: pointer;
       box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.5);
@@ -38,5 +39,10 @@
         }
       }
     }
+  }
+}
+@media (max-width: 1466px) {
+  .container-total{
+    justify-content: space-around;
   }
 }

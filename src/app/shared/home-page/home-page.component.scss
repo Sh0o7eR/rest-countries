@@ -1,16 +1,37 @@
 @import "src/styles";
 .conteiner-home{
-  padding: 50px 100px;
-  &__flag{
-    margin-top: 50px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+  //padding: 50px 100px;
+  &__box{
+    padding: 50px 20px 0 20px;
+    max-width: 1350px;
+    margin: 0 auto;
+    &__flag{
+      margin-top: 50px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    &__search{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
   }
-  &__search{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
+}
+.conteiner-home__flag{
+  margin-right: 50px;
+}
+@media (max-width: 768px) {
+  .conteiner-home{
+    margin-right: 0px;
+    &__box{
+      &__search{
+        &__filter{
+          margin-top: 30px;
+        }
+      }
+    }
+
   }
 }

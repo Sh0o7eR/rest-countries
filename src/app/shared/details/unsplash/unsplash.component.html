@@ -1,21 +1,22 @@
-<div class="container-gallery" *ngFor="let sec of section">
-  <a href="{{sec.portfolio}}" target="_blank">
-    <div class="container-gallery__image">
-      <img src="{{sec.image}}" alt="Immagine di {{sec.nameUser}}">
-      <div class="image-name">
-        <img class="image-profile" src="{{sec.imageUser}}" alt="Foto profilo di {{sec.nameUser}}">
-        <h2 class="name-profile">{{sec.nameUser}}</h2>
+<section>
+  <div class="container-gallery" *ngFor="let sec of section">
+    <a href="{{sec.portfolio}}" target="_blank">
+      <div class="container-gallery__image">
+        <img class="bcImage" src="{{sec.image}}" alt="Immagine di {{sec.nameUser}}">
+        <div class="image-name">
+          <img class="image-profile" src="{{sec.imageUser}}" alt="Foto profilo di {{sec.nameUser}}">
+          <h2 class="name-profile">{{sec.nameUser}}</h2>
+        </div>
+      </div>
+    </a>
+    <div class="container-gallery__desc">
+      <div class="container-gallery__desc__auth">
+        <h2>{{sec.nameUser}}</h2>
+      </div>
+      <div class="container-gallery__desc__contact">
+        <p *ngIf="sec.portfolio" class="container-gallery__desc__contact__portfolio"><b>Portfolio: </b> <a href="{{sec.portfolio}}" target="_blank">Visita subito il suo sito web!</a></p>
+        <p *ngIf="sec.bio"><b>Bio: </b> {{sec.bio}}</p>
       </div>
     </div>
-  </a>
-  <div class="container-gallery__desc">
-    <div class="container-gallery__desc__auth">
-<!--      <img src="{{sec.imageUser}}" alt="Foto profilo di {{sec.nameUser}}">-->
-      <h2>{{sec.nameUser}}</h2>
-    </div>
-    <div class="container-gallery__desc__contact">
-      <p *ngIf="sec.portfolio" class="container-gallery__desc__contact__portfolio"><b>Portfolio: </b> <a href="{{sec.portfolio}}" target="_blank">Visita subito il suo sito web!</a></p>
-      <p *ngIf="sec.bio"><b>Bio: </b> {{sec.bio}}</p>
-    </div>
   </div>
-</div>
+</section>

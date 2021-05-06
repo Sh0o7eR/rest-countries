@@ -1,35 +1,36 @@
 <div class="container-details">
-  <button class="btn btn-back" routerLink="/"><i class="fas fa-long-arrow-alt-left"></i> Back</button>
-  <div class="container-details__details-box" *ngFor="let detail of details">
-    <div class="container-details__details-box__image">
-      <img src="{{detail.flag}}" alt="Bandiera ">
-    </div>
-    <div class="container-details__details-box__desc">
-      <h1>{{detail.name}}</h1>
-      <div class="container-details__details-box__desc__list">
-        <ul>
-          <li><b>Native Name: </b>{{detail.nativeName}}</li>
-          <li><b>Population: </b>{{detail.population}}</li>
-          <li><b>Region: </b>{{detail.region}}</li>
-          <li><b>Sub Region: </b>{{detail.subregion}}</li>
-          <li><b>Capital: </b>{{detail.capital}}</li>
-        </ul>
-        <ul>
-          <li><b>top Level Domain: </b>{{detail.topLevelDomain[0]}}</li>
-          <li><b>Currencies: </b>{{detail.currencies[0].name}}</li>
-          <li><b>Languages: </b>{{detail.languages[0].name}}</li>
-        </ul>
+  <div class="container-details__box">
+    <button class="btn btn-back" routerLink="/"><i class="fas fa-long-arrow-alt-left"></i> Back</button>
+    <div class="container-details__box__details-box" *ngFor="let detail of details">
+      <div class="container-details__box__details-box__image">
+        <img src="{{detail.flag}}" alt="Bandiera ">
       </div>
-      <div class="container-details__details-box__desc__border-countries" *ngIf="detail.borders">
-        <ul>
-          <li><b>Border Countries:</b></li>
-          <li *ngFor="let bor of detail.borders">
-            <button class="btn btn-countries">{{bor}}</button>
-          </li>
-        </ul>
+      <div class="container-details__box__details-box__desc">
+        <h1>{{detail.name}}</h1>
+        <div class="container-details__box__details-box__desc__list">
+          <ul>
+            <li><b>Native Name: </b>{{detail.nativeName}}</li>
+            <li><b>Population: </b>{{detail.population}}</li>
+            <li><b>Region: </b>{{detail.region}}</li>
+            <li><b>Sub Region: </b>{{detail.subregion}}</li>
+            <li><b>Capital: </b>{{detail.capital}}</li>
+          </ul>
+          <ul>
+            <li><b>top Level Domain: </b>{{detail.topLevelDomain[0]}}</li>
+            <li><b>Currencies: </b>{{detail.currencies[0].name}}</li>
+            <li><b>Languages: </b>{{detail.languages[0].name}}</li>
+          </ul>
+        </div>
+        <div class="container-details__box__details-box__desc__border-countries" *ngIf="detail.borders">
+          <ul>
+            <li><b>Border Countries:</b></li>
+            <li *ngFor="let bor of detail.borders">
+              <button class="btn btn-countries">{{bor}}</button>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
 </div>
-
 <app-unsplash></app-unsplash>
