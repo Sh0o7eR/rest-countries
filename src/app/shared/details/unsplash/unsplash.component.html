@@ -14,7 +14,13 @@
         <h2>{{sec.nameUser}}</h2>
       </div>
       <div class="container-gallery__desc__contact">
-        <p *ngIf="sec.portfolio" class="container-gallery__desc__contact__portfolio"><b>Portfolio: </b> <a href="{{sec.portfolio}}" target="_blank">Visita subito il suo sito web!</a></p>
+        <p *ngIf="sec.portfolio" class="container-gallery__desc__contact__portfolio">
+          <b>Portfolio: </b>
+          <a href="{{sec.portfolio}}"
+             target="_blank">
+            Visita subito il suo sito web!
+          </a>
+        </p>
         <p *ngIf="sec.bio"><b>Bio: </b> {{sec.bio}}</p>
       </div>
     </div>

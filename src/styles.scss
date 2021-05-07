@@ -15,28 +15,49 @@ body{
   font-family: 'Nunito Sans', sans-serif;
   color: var(--VeryDarkBlueLightMode);
   font-size: 14px;
+  transition: all 0.2s linear;
 }
-body.dark-mode {
+.bcDark{
   background-color: var(--VeryDarkBlueDarkMode);
-  color: var(--White);
 }
-body.light-mode {
+.bcLight{
+
+}
+.cardDark{
   background-color: var(--White);
   color: var(--VeryDarkBlueDarkMode);
+  box-shadow: 0px 0px 5px 1px rgba(255, 255, 255, 0.2)!important;
+  &:hover{
+    box-shadow: 0px 0px 5px 1px rgba(255,255,255,0.6)!important;
+  }
 }
-body:not(.dark-mode-preloading) {
-  transition: all 0.3s linear;
+.cDark{
+  color: var(--White)!important;
+}
+.cardLight{
+  background-color: var(--White);
+  color: var(--VeryDarkBlueDarkMode);
+  box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.1);
+  &:hover{
+    box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.5);
+  }
+}
+.filterDark{
+  background-color: var(--White);
+}
+.buttonDark{
+  background-color: var(--White);
 }
 li{
   list-style: none;
 }
 a{
   text-decoration: none;
-  color: var(--VeryDarkBlueLightMode);
+  //color: var(--VeryDarkBlueLightMode);
 }
-a.dark-mode{
-  color: var(--White);
-}
-a.light-mode{
-  color: var(--VeryDarkBlueLightMode);
-}
+//a.dark-mode{
+//  color: var(--White);
+//}
+//a.light-mode{
+//  color: var(--VeryDarkBlueLightMode);
+//}

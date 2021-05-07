@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import {DarkModeService} from 'angular-dark-mode';
-import {Observable} from 'rxjs';
 
 @Component({
   selector: 'app-navbar',
@@ -12,9 +10,7 @@ export class NavbarComponent implements OnInit {
   icona = 'moon';
   testo = 'Dark Mode';
 
-  darkMode$: Observable<boolean> = this.darkModeService.darkMode$;
-
-  constructor(private darkModeService: DarkModeService) { }
+  constructor() { }
 
   ngOnInit(): void {
   }
@@ -29,6 +25,30 @@ export class NavbarComponent implements OnInit {
     }
   }
   onToggle(): void {
-    this.darkModeService.toggle();
+    const el = document.body;
+    const card = document.querySelectorAll('.container-total__card');
+    const filter = document.querySelector('.conteiner-home__box__search__filter');
+    el.classList.toggle('bcDark');
+    el.classList.toggle('cDark');
+    filter.classList.toggle('filterDark');
+    card.forEach(element => {
+        element.classList.toggle('cardDark');
+    });
   }
+
+  // changeColor(): void{
+  //   const btnBack = document.querySelector('.btn-back');
+  //   const btnC = document.querySelectorAll('.btn-countries');
+  //   const cardUnsplash = document.querySelector('.container-gallery__image');
+  //
+  //   btnBack.classList.toggle('cardDark');
+  //   cardUnsplash.classList.toggle('cardDark');
+  //
+  //   btnC.forEach(element => {
+  //     element.classList.toggle('cardDark');
+  //   });
+  //   btnC.forEach(el => {
+  //     el.classList.toggle('buttonDark');
+  //   });
+  // }
 }
