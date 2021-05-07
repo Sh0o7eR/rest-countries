@@ -20,8 +20,8 @@ body{
 .bcDark{
   background-color: var(--VeryDarkBlueDarkMode);
 }
-.bcLight{
-
+.shadowDark{
+  box-shadow: 0px 0px 3px 1px rgba(255, 255, 255, 0.1)!important;
 }
 .cardDark{
   background-color: var(--White);
@@ -34,6 +34,13 @@ body{
 .cDark{
   color: var(--White)!important;
 }
+.textWhite{
+  color: #e9e9e9!important;
+  &:hover{
+    color: var(--White)!important;
+  }
+}
+
 .cardLight{
   background-color: var(--White);
   color: var(--VeryDarkBlueDarkMode);

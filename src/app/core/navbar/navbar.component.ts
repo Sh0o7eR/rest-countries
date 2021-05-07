@@ -28,12 +28,16 @@ export class NavbarComponent implements OnInit {
     const el = document.body;
     const card = document.querySelectorAll('.container-total__card');
     const filter = document.querySelector('.conteiner-home__box__search__filter');
+    const textNav = document.querySelector('.textNav');
+    const nav = document.querySelector('.navbar');
     el.classList.toggle('bcDark');
     el.classList.toggle('cDark');
     filter.classList.toggle('filterDark');
     card.forEach(element => {
         element.classList.toggle('cardDark');
     });
+    textNav.classList.toggle('textWhite');
+    nav.classList.toggle('shadowDark');
   }
 
   // changeColor(): void{
