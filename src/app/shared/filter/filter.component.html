@@ -1,9 +1,15 @@
 <div class="dropdown">
   <button class="btn" type="button" id="dropdownFilter" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Filter by Region
+    {{stringFilter}}
     <i class="fas fa-angle-down"></i>
   </button>
   <div style="width: 100%" class="dropdown-menu" aria-labelledby="dropdownFilter">
-    <a class="dropdown-item" *ngFor="let filter of filters">{{filter}}</a>
+    <a class="dropdown-item"
+       *ngFor="let filter of filters"
+       #filter
+       (click)="addSelected(filter)"
+    >
+      {{filter}}
+    </a>
   </div>
 </div>

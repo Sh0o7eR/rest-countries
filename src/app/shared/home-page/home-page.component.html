@@ -2,7 +2,7 @@
   <div class="conteiner-home__box">
     <div class="conteiner-home__box__search">
       <app-share-bar (newItemEvent)="addItem($event)"></app-share-bar>
-      <app-filter class="conteiner-home__box__search__filter"></app-filter>
+      <app-filter (eventFilter)="addFilter($event)" class="conteiner-home__box__search__filter"></app-filter>
     </div>
     <div class="conteiner-home__box__flag">
       <app-card [cards]="item"></app-card>

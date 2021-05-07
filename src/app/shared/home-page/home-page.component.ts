@@ -9,6 +9,8 @@ import {CountriesInterface} from '../../core/mocks';
 })
 export class HomePageComponent implements OnInit {
   item?: CountriesInterface;
+  filter?: CountriesInterface;
+
   constructor(private searchService: SearchService) { }
 
   ngOnInit(): void {
@@ -22,6 +24,20 @@ export class HomePageComponent implements OnInit {
     let path = '';
     if (newItem !== ''){
       path = 'name/';
+    } else {
+      path = 'all';
+    }
+    this.searchService.getFilterResponseByName(path, newItem)
+      .subscribe(res => {
+        this.item = res;
+      });
+
+  }
+
+  addFilter(newItem: string): void {
+    let path = '';
+    if (newItem !== ''){
+      path = 'region/';
     } else {
       path = 'all';
     }

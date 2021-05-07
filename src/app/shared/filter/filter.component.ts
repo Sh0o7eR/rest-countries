@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {SearchService} from '../../core/services/search.service';
 
 
@@ -8,6 +8,9 @@ import {SearchService} from '../../core/services/search.service';
   styleUrls: ['./filter.component.scss']
 })
 export class FilterComponent implements OnInit {
+  @Output() eventFilter = new EventEmitter<string>();
+  stringFilter = 'Filter by Region';
+
   filters: any = [];
 
   constructor(private searchService: SearchService) { }
@@ -15,5 +18,10 @@ export class FilterComponent implements OnInit {
   ngOnInit(): void {
     this.searchService.getRegionCountries()
       .subscribe(filter => this.filters = filter);
+  }
+
+  addSelected(value: any): void {
+    this.eventFilter.emit(value);
+    this.stringFilter = value;
   }
 }
