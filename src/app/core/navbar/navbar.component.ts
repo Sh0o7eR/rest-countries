@@ -9,6 +9,7 @@ export class NavbarComponent implements OnInit {
   bole: boolean;
   icona = 'moon';
   testo = 'Dark Mode';
+  dark = false;
 
   constructor() { }
 
@@ -24,22 +25,33 @@ export class NavbarComponent implements OnInit {
       return this.icona = 'moon';
     }
   }
-  onToggle(): void {
+  onToggle(): void{
+    this.dark = !this.dark;
+    console.log(this.dark);
+  }
+  darkMode(): void {
     const el = document.body;
     const card = document.querySelectorAll('.container-total__card');
-    const filter = document.querySelector('.conteiner-home__box__search__filter');
+    // const filter = document.querySelector('.conteiner-home__box__search__filter');
     const textNav = document.querySelector('.textNav');
+    const titleNav = document.querySelector('.titleNav');
     const nav = document.querySelector('.navbar');
+    const pageDetails = document.querySelector('.container-details__box__details-box__desc');
+    const pageDetailsUnsplash = document.querySelectorAll('.container-gallery');
     el.classList.toggle('bcDark');
-    el.classList.toggle('cDark');
-    filter.classList.toggle('filterDark');
+    // el.classList.toggle('cDark');
+    // filter.classList.toggle('filterDark');
     card.forEach(element => {
-        element.classList.toggle('cardDark');
+      element.classList.toggle('cardDark');
     });
     textNav.classList.toggle('textWhite');
+    titleNav.classList.toggle('textWhite');
+    pageDetails.classList.toggle('textWhite');
+    pageDetailsUnsplash.forEach(element => {
+          element.classList.toggle('textWhite');
+      });
     nav.classList.toggle('shadowDark');
   }
-
   // changeColor(): void{
   //   const btnBack = document.querySelector('.btn-back');
   //   const btnC = document.querySelectorAll('.btn-countries');

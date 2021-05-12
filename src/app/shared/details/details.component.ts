@@ -11,7 +11,6 @@ export class DetailsComponent implements OnInit {
 
   details: any = [];
   borders: any = [];
-  provaId = this.route.snapshot.paramMap.get('name');
   constructor(private route: ActivatedRoute, private searchService: SearchService) { }
 
   ngOnInit(): void {
